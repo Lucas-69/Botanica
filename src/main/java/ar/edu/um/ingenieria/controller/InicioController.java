@@ -15,7 +15,7 @@ import ar.edu.um.ingenieria.repository.UsuarioRepository;
 
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/aaa")
 public class InicioController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(InicioController.class);
@@ -30,6 +30,6 @@ public class InicioController {
 	public String indexPage(@AuthenticationPrincipal Usuario sesion,Model model) {
 		logger.info("carga pagina de inicio controler");
 		model.addAttribute("sesion", sesion);
-		return "index"; 
+		return "registro"; 
 	}
 }

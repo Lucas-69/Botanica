@@ -54,7 +54,7 @@
 							href="/registro">Registrarse</a></li>
 
 						<li class="nav-item"><a class="nav-link js-scroll-trigger"
-							href="/login">Iniciar Sesi&oacute;n</a></li>
+							href="/botanica/login">Iniciar Sesi&oacute;n</a></li>
 					</c:if>
 					<c:if test="${not empty sesion}">
 						<li class="nav-item"><a class="nav-link js-scroll-trigger"
@@ -66,7 +66,7 @@
 					<li class="nav-item"><a class="nav-link js-scroll-trigger"
 						href="#services">Servicios</a></li>
 					<li class="nav-item"><a class="nav-link js-scroll-trigger"
-						href="/foro">Foro</a></li>
+						href="/botanica/foro">Foro</a></li>
 					<li class="nav-item"><a class="nav-link js-scroll-trigger"
 						href="/#contact">Contacto</a></li>
 					<li class="nav-item"><a class="nav-link js-scroll-trigger"

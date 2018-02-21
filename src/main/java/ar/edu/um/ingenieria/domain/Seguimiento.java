@@ -36,9 +36,6 @@ public class Seguimiento implements Serializable{
 	@JoinColumn(name="planta_id")
 	private Planta planta;
 	
-	@OneToMany (mappedBy = "seguimiento", fetch = FetchType.EAGER)
-	private List<Etapa> etapas;
-	
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="estado_id")
 	private Estado estado;
@@ -70,14 +67,6 @@ public class Seguimiento implements Serializable{
 
 	public void setPlanta(Planta planta) {
 		this.planta = planta;
-	}
-
-	public List<Etapa> getEtapas() {
-		return etapas;
-	}
-
-	public void setEtapas(List<Etapa> etapas) {
-		this.etapas = etapas;
 	}
 
 	public Estado getEstado() {

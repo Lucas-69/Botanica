@@ -30,7 +30,7 @@ public class Tarea implements Serializable{
 	
 	@Column (name = "descripcion")
 	private String descripcion;
-	
+	/*
 	@OneToOne(fetch = FetchType.EAGER)	
 	@JoinColumn(name="estados_id")		
 	private Estado estado;
@@ -38,7 +38,7 @@ public class Tarea implements Serializable{
 	@OneToOne(fetch = FetchType.EAGER)	
 	@JoinColumn(name="plantas_id")		
 	private Planta planta;
-	
+	*/
 	public Integer getId() {
 		return id;
 	}
@@ -70,7 +70,7 @@ public class Tarea implements Serializable{
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
+/*
 	public Estado getEstado() {
 		return estado;
 	}
@@ -86,7 +86,7 @@ public class Tarea implements Serializable{
 	public void setPlanta(Planta planta) {
 		this.planta = planta;
 	}
-
+*/
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
@@ -137,7 +137,7 @@ public class Tarea implements Serializable{
 	@Override
 	public String toString() {
 		return "Tarea [id=" + id + ", nombre=" + nombre + ", etapa=" + etapa + ", descripcion=" + descripcion
-				+ ", estado=" + estado + ", planta=" + planta + "]";
+				+ ", estado=" /*+ estado + ", planta=" + planta */+ "]";
 	}
 
 	public Tarea() {

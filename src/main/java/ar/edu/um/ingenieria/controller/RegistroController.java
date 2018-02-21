@@ -42,7 +42,7 @@ public class RegistroController {
 		UsuarioDTO usuario = new UsuarioDTO();
 		model.addAttribute("usuario", usuario);
 		model.addAttribute("rol", rolServiceImpl.findWithOutAdmin());
-		return "registro";
+		return "index";
 	}
 
 	@RequestMapping(value = "/registro", method = RequestMethod.POST)
