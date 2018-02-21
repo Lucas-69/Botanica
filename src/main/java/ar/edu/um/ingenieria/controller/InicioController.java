@@ -1,5 +1,9 @@
 package ar.edu.um.ingenieria.controller;
 
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +31,16 @@ public class InicioController {
 	private TemaRepository temaRepository;
 	
 	@GetMapping("/")
-	public String indexPage(@AuthenticationPrincipal Usuario sesion,Model model) {
-		logger.info("carga pagina de inicio controler");
-		model.addAttribute("sesion", sesion);
-		return "index"; 
+	public String indexPage(Locale locale, Model model) {
+		logger.info("Welcome home! The client locale is {}.", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "home";
 	}
 }

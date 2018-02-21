@@ -1,4 +1,4 @@
-<jsp:include page="/partes/head.jsp" flush="true" />
+
     <header class="masthead">
       <div class="header-content">
         <div class="header-content-inner">
@@ -166,4 +166,3 @@
         <a class="btn btn-default btn-xl sr-button" href="/#">Descargar Ahora!</a>
       </div>
     </div>
- <jsp:include page="/partes/footer.jsp" flush="true" />

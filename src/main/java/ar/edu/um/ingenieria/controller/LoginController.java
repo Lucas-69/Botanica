@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/login")
 public class LoginController {
+	
 	private static final Logger logger = LoggerFactory
 			.getLogger(LoginController.class);
 	private static final String URL_LOGIN = "iniciar";

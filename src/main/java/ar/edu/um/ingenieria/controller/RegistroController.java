@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,16 +37,16 @@ public class RegistroController {
 	@Autowired
 	private RolServiceImpl rolServiceImpl;
 	
-	@RequestMapping(value = "/registro", method = RequestMethod.GET)
+	@GetMapping(value = "/registro")
 	public String registracion(Model model) {
-		logger.info("ControladorRegistro");
+		/*logger.info("ControladorRegistro");
 		UsuarioDTO usuario = new UsuarioDTO();
 		model.addAttribute("usuario", usuario);
-		model.addAttribute("rol", rolServiceImpl.findWithOutAdmin());
-		return "registro";
+		model.addAttribute("rol", rolServiceImpl.findWithOutAdmin());*/
+		return "registro todos putos";
 	}
 
-	@RequestMapping(value = "/registro", method = RequestMethod.POST)
+	@RequestMapping(value = "/regist", method = RequestMethod.POST)
 	public String formNuevo(@Valid @ModelAttribute("usuario") UsuarioDTO usuarioDTO, BindingResult result, Model model) {
 		if (!result.hasErrors()) {
 			usuarioManager.create(usuarioDTO);
