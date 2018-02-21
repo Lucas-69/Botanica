@@ -14,7 +14,7 @@
 <LINK REL="SHORTCUT ICON" HREF="img/header.jpg" />
 
 <!-- Bootstrap core CSS -->
-<link href="/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/vendor/bootstrap.css" rel="stylesheet">
 
 <!-- Custom fonts for this template -->
 <link href="/vendor/font-awesome/css/font-awesome.css" rel="stylesheet"
@@ -75,3 +75,5 @@
 			</div>
 		</div>
 	</nav>
+	</body>
+	</html>
